@@ -70,7 +70,7 @@ const SchemaViewer: React.FC = () => {
       setLoading(true);
       try {
         const response = await axios.get(`/api/schema/${fileId}`);
-        setSchema(response.data);
+        dispatch(setSchema(response.data));
       } catch (error) {
         console.error('Error fetching schema:', error);
       } finally {
