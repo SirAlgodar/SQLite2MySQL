@@ -127,7 +127,7 @@ const MigrationForm: React.FC = () => {
   const pollStatus = useCallback((migrationId: string) => {
     const interval = setInterval(async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/status/${migrationId}`);
+        const response = await axios.get(`/api/status/${migrationId}`);
         dispatch(updateMigrationStatus(response.data));
         
         if (response.data.status === 'completed' || response.data.status === 'failed') {
@@ -145,7 +145,7 @@ const MigrationForm: React.FC = () => {
     if (!validateForm()) return;
 
     try {
-      const response = await axios.post('http://localhost:8000/migrate', {
+      const response = await axios.post('/api/migrate', {
         sqlite_file_id: fileId,
         connection: config,
         ...options,

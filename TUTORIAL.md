@@ -28,14 +28,49 @@ O script irá automaticamente:
 4. Instalar as dependências do frontend (`node_modules`).
 5. Iniciar o servidor de desenvolvimento do frontend (geralmente na porta **5173**).
 
+## Execução como Serviço (Recomendado para VMs)
+
+Para manter a aplicação rodando em segundo plano e iniciar automaticamente com o sistema, recomendamos o uso do **PM2**.
+
+### 1. Instalação do PM2
+
+```bash
+# Instala o PM2 globalmente
+sudo npm install -g pm2
+```
+
+### 2. Iniciar a Aplicação
+
+Na raiz do projeto, execute:
+
+```bash
+# Inicia os serviços (backend e frontend)
+pm2 start ecosystem.config.cjs
+
+# Salva a lista de processos para reiniciar após reboot
+pm2 save
+
+# Gera o script de startup do sistema
+pm2 startup
+# (Copie e cole o comando que o pm2 startup exibir)
+```
+
+### 3. Gerenciamento
+
+-   **Ver status**: `pm2 status`
+-   **Ver logs**: `pm2 logs`
+-   **Parar tudo**: `pm2 stop all`
+-   **Reiniciar**: `pm2 restart all`
+
 ## Acesso à Aplicação
 
 Após a inicialização bem-sucedida:
 
-- **Frontend (Interface Web)**: Acesse [http://localhost:5173](http://localhost:5173) (ou a porta indicada no terminal).
-- **Backend (API Docs)**: Acesse [http://localhost:8000/docs](http://localhost:8000/docs) para ver a documentação interativa da API (Swagger UI).
+-   **Frontend (Interface Web)**: Acesse `http://<SEU_IP_DA_VM>:5173`
+-   **Backend (API)**: O backend roda internamente na porta 8000, mas o frontend redireciona as chamadas automaticamente.
 
-## Inicialização Manual
+## Inicialização Manual (Desenvolvimento)
+
 
 Caso prefira rodar os serviços separadamente, siga os passos abaixo em dois terminais diferentes.
 

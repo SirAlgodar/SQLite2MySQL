@@ -28,7 +28,7 @@ const DataPreview: React.FC<DataPreviewProps> = ({ tableName, onClose }) => {
       setError(null);
       try {
         const response = await axios.get(
-          `http://localhost:8000/preview/${fileId}/${tableName}?limit=${pageSize}&offset=${page * pageSize}`
+          `/api/preview/${fileId}/${tableName}?limit=${pageSize}&offset=${page * pageSize}`
         );
         setData(response.data);
       } catch (err: any) {
