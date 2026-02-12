@@ -83,8 +83,14 @@ npm run test:coverage
 -   **Erros `command not found` (python3, pip, npm, uvicorn)**: Certifique-se de que todas as dependências estão instaladas.
     -   **Ubuntu/Debian**:
         ```bash
+        # 1. Instalar Python e ferramentas
         sudo apt update
-        sudo apt install python3 python3-venv python3-pip nodejs npm
+        sudo apt install -y python3 python3-venv python3-pip curl
+
+        # 2. Instalar Node.js (v20 LTS) via NodeSource
+        # (Evita conflitos de pacotes do repositório padrão)
+        curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+        sudo apt install -y nodejs
         ```
     -   **CentOS/RHEL**:
         ```bash
