@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+python-multipart
+mysql-connector-python
+pydantic
+python-dotenv
+sqlalchemy

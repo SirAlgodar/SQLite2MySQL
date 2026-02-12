@@ -1,0 +1,93 @@
+{
+  "common": {
+    "upload": "Upload",
+    "schema": "Esquema",
+    "preview": "Prévia",
+    "migration": "Migração",
+    "export": "Exportar SQL",
+    "test_connection": "Testar Conexão",
+    "start": "Iniciar",
+    "cancel": "Cancelar",
+    "success": "Sucesso",
+    "error": "Erro",
+    "loading": "Carregando...",
+    "back": "Voltar",
+    "new_migration": "Nova Migração",
+    "confirm_reset": "Tem certeza que deseja iniciar uma nova migração? Todos os dados atuais serão perdidos."
+  },
+  "app": {
+    "welcome_title": "Migração Inteligente de Banco de Dados",
+    "welcome_subtitle": "Converta seu SQLite do Grafana para MySQL ou MariaDB em segundos com integridade total de dados e resolução de duplicatas.",
+    "ready_to_migrate": "Banco de dados carregado e pronto para migração",
+    "schema_analysis": "Análise de Estrutura",
+    "migration_config": "Configuração da Migração"
+  },
+  "features": {
+    "fast_title": "Rápido e Eficiente",
+    "fast_desc": "Processamento em lotes para migrar milhares de registros em segundos.",
+    "secure_title": "Seguro",
+    "secure_desc": "Validação pós-migração e suporte a rollback em caso de falhas.",
+    "smart_title": "Inteligente",
+    "smart_desc": "Mapeamento automático de tipos e resolução de duplicatas específicas do Grafana."
+  },
+  "uploader": {
+    "title": "Upload de Arquivo SQLite",
+    "dropzone": "Arraste e solte seu arquivo .db ou .sqlite aqui, ou clique para selecionar",
+    "invalid_file": "Formato de arquivo inválido. Use .db ou .sqlite",
+    "uploading": "Enviando arquivo...",
+    "success": "Arquivo enviado com sucesso!"
+  },
+  "schema": {
+    "title": "Explorador de Esquema",
+    "tables": "Tabelas",
+    "columns": "Colunas",
+    "records": "Registros",
+    "search_placeholder": "Pesquisar tabelas ou colunas...",
+    "no_tables_found": "Nenhuma tabela encontrada",
+    "loading": "Analisando estrutura do banco de dados...",
+    "preview_data": "Visualizar Dados",
+    "select_table": "Selecione uma tabela para ver os detalhes",
+    "column": "Coluna",
+    "type": "Tipo",
+    "constraints": "Restrições"
+  },
+  "preview": {
+    "title": "Prévia de Dados",
+    "subtitle": "Exibindo os primeiros registros para validação",
+    "showing_page": "Página {{page}}",
+    "no_data": "Esta tabela não contém registros."
+  },
+  "migration": {
+    "target_config": "Destino MySQL / MariaDB",
+    "connection_success": "Conexão estabelecida com sucesso!",
+    "options_title": "Opções de Migração",
+    "host": "Host / Servidor",
+    "port": "Porta",
+    "user": "Usuário",
+    "password": "Senha",
+    "database": "Nome do Banco",
+    "test_connection": "Testar Conexão",
+    "include_data": "Migrar todos os registros (Dados)",
+    "resolve_duplicates": "Resolver duplicatas automaticamente",
+    "start_button": "Iniciar Migração Direta",
+    "export_button": "Gerar Script SQL (.sql)",
+    "disclaimer": "Nota: A migração direta irá sobrescrever tabelas existentes no banco de destino.",
+    "start_failed": "Falha ao iniciar a migração. Verifique sua conexão e tente novamente."
+  },
+  "validation": {
+    "host_required": "O host é obrigatório",
+    "port_invalid": "A porta deve estar entre 1 e 65535",
+    "user_required": "O usuário é obrigatório",
+    "database_required": "O nome do banco de dados é obrigatório"
+  },
+  "status": {
+    "pending": "Aguardando início...",
+    "migrating": "Migração em progresso",
+    "completed": "Migração concluída com sucesso!",
+    "failed": "Falha na migração",
+    "logs": "Log de Operações"
+  },
+  "footer": {
+    "made_with": "Feito com"
+  }
+}

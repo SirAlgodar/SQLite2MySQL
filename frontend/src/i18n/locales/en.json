@@ -1,0 +1,93 @@
+{
+  "common": {
+    "upload": "Upload",
+    "schema": "Schema",
+    "preview": "Preview",
+    "migration": "Migration",
+    "export": "Export SQL",
+    "test_connection": "Test Connection",
+    "start": "Start",
+    "cancel": "Cancel",
+    "success": "Success",
+    "error": "Error",
+    "loading": "Loading...",
+    "back": "Back",
+    "new_migration": "New Migration",
+    "confirm_reset": "Are you sure you want to start a new migration? All current progress will be lost."
+  },
+  "app": {
+    "welcome_title": "Smart Database Migration",
+    "welcome_subtitle": "Convert your Grafana SQLite to MySQL or MariaDB in seconds with full data integrity and duplicate resolution.",
+    "ready_to_migrate": "Database loaded and ready for migration",
+    "schema_analysis": "Schema Analysis",
+    "migration_config": "Migration Configuration"
+  },
+  "features": {
+    "fast_title": "Fast and Efficient",
+    "fast_desc": "Batch processing to migrate thousands of records in seconds.",
+    "secure_title": "Secure",
+    "secure_desc": "Post-migration validation and rollback support in case of failure.",
+    "smart_title": "Smart",
+    "smart_desc": "Automatic type mapping and Grafana-specific duplicate resolution."
+  },
+  "uploader": {
+    "title": "SQLite File Upload",
+    "dropzone": "Drag and drop your .db or .sqlite file here, or click to select",
+    "invalid_file": "Invalid file format. Please use .db or .sqlite",
+    "uploading": "Uploading file...",
+    "success": "File uploaded successfully!"
+  },
+  "schema": {
+    "title": "Schema Explorer",
+    "tables": "Tables",
+    "columns": "Columns",
+    "records": "Records",
+    "search_placeholder": "Search tables or columns...",
+    "no_tables_found": "No tables found",
+    "loading": "Analyzing database structure...",
+    "preview_data": "View Data",
+    "select_table": "Select a table to see details",
+    "column": "Column",
+    "type": "Type",
+    "constraints": "Constraints"
+  },
+  "preview": {
+    "title": "Data Preview",
+    "subtitle": "Displaying first records for validation",
+    "showing_page": "Page {{page}}",
+    "no_data": "This table contains no records."
+  },
+  "migration": {
+    "target_config": "MySQL / MariaDB Target",
+    "connection_success": "Connection established successfully!",
+    "options_title": "Migration Options",
+    "host": "Host / Server",
+    "port": "Port",
+    "user": "User",
+    "password": "Password",
+    "database": "Database Name",
+    "test_connection": "Test Connection",
+    "include_data": "Migrate all records (Data)",
+    "resolve_duplicates": "Resolve duplicates automatically",
+    "start_button": "Start Direct Migration",
+    "export_button": "Generate SQL Script (.sql)",
+    "disclaimer": "Note: Direct migration will overwrite existing tables in the target database.",
+    "start_failed": "Failed to start migration. Please check your connection and try again."
+  },
+  "validation": {
+    "host_required": "Host is required",
+    "port_invalid": "Port must be between 1 and 65535",
+    "user_required": "User is required",
+    "database_required": "Database name is required"
+  },
+  "status": {
+    "pending": "Waiting to start...",
+    "migrating": "Migration in progress",
+    "completed": "Migration completed successfully!",
+    "failed": "Migration failed",
+    "logs": "Operation Log"
+  },
+  "footer": {
+    "made_with": "Made with"
+  }
+}
