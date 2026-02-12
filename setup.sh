@@ -29,9 +29,10 @@ echo "✅ System dependencies are met."
 echo "📦 Setting up Backend..."
 cd backend
 
-# Create venv if it doesn't exist
-if [ ! -d "venv" ]; then
+# Create venv if it doesn't exist or is broken
+if [ ! -f "venv/bin/activate" ]; then
     echo "   Creating virtual environment..."
+    rm -rf venv # Remove broken/partial venv
     if ! python3 -m venv venv; then
         echo "❌ Error: Failed to create virtual environment."
         echo "   On Linux, try: sudo apt install python3-venv"
