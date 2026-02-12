@@ -166,7 +166,7 @@ const MigrationForm: React.FC = () => {
   const exportSQL = useCallback(async () => {
     if (!fileId) return;
     try {
-      const response = await axios.get(`http://localhost:8000/export-sql/${fileId}?include_data=${options.include_data}`, {
+      const response = await axios.get(`/api/export-sql/${fileId}?include_data=${options.include_data}`, {
         responseType: 'blob',
       });
       
