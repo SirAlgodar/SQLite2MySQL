@@ -26,6 +26,19 @@ if [ "$NODE_VERSION" -lt 18 ]; then
 fi
 echo "✅ Node.js version $(node -v) is compatible."
 
+# Check npm
+if ! command -v npm &> /dev/null; then
+    echo "❌ Error: npm is not installed. Please install npm (usually comes with Node.js)."
+    exit 1
+fi
+
+# Check Python version
+echo "🔍 Checking Python version..."
+if ! command -v python3 &> /dev/null; then
+    echo "❌ Error: Python 3 is not installed. Please install Python 3.10 or higher."
+    exit 1
+fi
+
 # 1. Setup and Start Backend
 echo "📦 Setting up Backend..."
 cd backend
@@ -33,11 +46,20 @@ cd backend
 # Create venv if it doesn't exist
 if [ ! -d "venv" ]; then
     echo "Creating virtual environment..."
-    python3 -m venv venv
+    if ! python3 -m venv venv; then
+        echo "❌ Error: Failed to create virtual environment."
+        echo "   On Ubuntu/Debian, try running: sudo apt install python3-venv"
+        exit 1
+    fi
 fi
 
 # Activate venv
-source venv/bin/activate
+if [ -f "venv/bin/activate" ]; then
+    source venv/bin/activate
+else
+    echo "❌ Error: venv/bin/activate not found. Virtual environment setup failed."
+    exit 1
+fi
 
 # Install requirements
 echo "Installing backend dependencies..."

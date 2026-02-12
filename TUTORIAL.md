@@ -80,3 +80,13 @@ npm run test:coverage
 -   **Porta em uso**: Se as portas 8000 ou 5173 estiverem ocupadas, feche os processos que as estão utilizando ou configure portas diferentes.
 -   **Erro de Conexão MySQL**: Verifique se o serviço MySQL está rodando e se as credenciais (host, user, password) estão corretas. O usuário deve ter permissões para criar tabelas e inserir dados.
 -   **Erro `SyntaxError: Unexpected token '.'` (Vite)**: Isso ocorre porque sua versão do Node.js é antiga. O projeto requer **Node.js v18** ou superior. Atualize seu ambiente.
+-   **Erros `command not found` (python3, pip, npm, uvicorn)**: Certifique-se de que todas as dependências estão instaladas.
+    -   **Ubuntu/Debian**:
+        ```bash
+        sudo apt update
+        sudo apt install python3 python3-venv python3-pip nodejs npm
+        ```
+    -   **CentOS/RHEL**:
+        ```bash
+        sudo yum install python3 python3-pip nodejs npm
+        ```
