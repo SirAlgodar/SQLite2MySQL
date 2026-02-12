@@ -44,7 +44,10 @@ sudo npm install -g pm2
 Na raiz do projeto, execute:
 
 ```bash
-# Inicia os serviços (backend e frontend)
+# 1. Prepare o ambiente (instala dependências)
+./setup.sh
+
+# 2. Inicie os serviços com PM2
 pm2 start ecosystem.config.cjs
 
 # Salva a lista de processos para reiniciar após reboot
