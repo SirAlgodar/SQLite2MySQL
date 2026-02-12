@@ -11,6 +11,21 @@ trap cleanup SIGINT SIGTERM
 
 echo "🚀 Starting MigrateDB Application..."
 
+# Check Node.js version
+echo "🔍 Checking Node.js version..."
+if ! command -v node &> /dev/null; then
+    echo "❌ Error: Node.js is not installed. Please install Node.js v18 or higher."
+    exit 1
+fi
+
+NODE_VERSION=$(node -v | cut -d 'v' -f 2 | cut -d '.' -f 1)
+if [ "$NODE_VERSION" -lt 18 ]; then
+    echo "❌ Error: Node.js version is $(node -v). Please upgrade to Node.js v18 or higher to run this application."
+    echo "   See: https://nodejs.org/"
+    exit 1
+fi
+echo "✅ Node.js version $(node -v) is compatible."
+
 # 1. Setup and Start Backend
 echo "📦 Setting up Backend..."
 cd backend

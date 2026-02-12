@@ -79,3 +79,4 @@ npm run test:coverage
 -   **Erro `zsh: command not found: uvicorn`**: Certifique-se de que o ambiente virtual está ativado (`source venv/bin/activate`) antes de rodar o `uvicorn`.
 -   **Porta em uso**: Se as portas 8000 ou 5173 estiverem ocupadas, feche os processos que as estão utilizando ou configure portas diferentes.
 -   **Erro de Conexão MySQL**: Verifique se o serviço MySQL está rodando e se as credenciais (host, user, password) estão corretas. O usuário deve ter permissões para criar tabelas e inserir dados.
+-   **Erro `SyntaxError: Unexpected token '.'` (Vite)**: Isso ocorre porque sua versão do Node.js é antiga. O projeto requer **Node.js v18** ou superior. Atualize seu ambiente.
